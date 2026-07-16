@@ -423,26 +423,32 @@
     <h2 class="font-display font-bold uppercase text-3xl sm:text-4xl mb-2">Order the TRP-1</h2>
     <p class="text-steel mb-10">Single-unit orders and corporate procurement both start here. We'll confirm base type, lead time, and pricing by email.</p>
 
-    <div class="grid sm:grid-cols-2 gap-5">
+    <form action="https://formsubmit.co/akileswar4455@gmail.com" method="POST" class="grid sm:grid-cols-2 gap-5">
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="New Mr.Align TRP-1 quote request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+
       <div>
         <label class="eyebrow text-[11px] text-steel block mb-2">Full name</label>
-        <input type="text" placeholder="Jane Rodriguez" class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
+        <input type="text" name="Full name" required placeholder="Jane Rodriguez" class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
       </div>
       <div>
         <label class="eyebrow text-[11px] text-steel block mb-2">Company</label>
-        <input type="text" placeholder="Rodriguez Automation Ltd." class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
+        <input type="text" name="Company" placeholder="Rodriguez Automation Ltd." class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
       </div>
       <div>
         <label class="eyebrow text-[11px] text-steel block mb-2">Work email</label>
-        <input type="email" placeholder="jane@company.com" class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
+        <input type="email" name="Work email" required placeholder="jane@company.com" class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
       </div>
       <div>
         <label class="eyebrow text-[11px] text-steel block mb-2">Quantity</label>
-        <input type="number" min="1" placeholder="1" class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
+        <input type="number" name="Quantity" min="1" placeholder="1" class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
       </div>
       <div class="sm:col-span-2">
         <label class="eyebrow text-[11px] text-steel block mb-2">Base type</label>
-        <select class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
+        <select name="Base type" class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard">
           <option>Tripod foot</option>
           <option>Magnetic base</option>
           <option>Panel clamp</option>
@@ -451,12 +457,13 @@
       </div>
       <div class="sm:col-span-2">
         <label class="eyebrow text-[11px] text-steel block mb-2">Notes</label>
-        <textarea rows="3" placeholder="Site conditions, deadline, or anything else we should know." class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard"></textarea>
+        <textarea rows="3" name="Notes" placeholder="Site conditions, deadline, or anything else we should know." class="w-full bg-graphite border border-line px-4 py-3 text-sm focus:outline-none focus:border-hazard"></textarea>
       </div>
-    </div>
-    <button type="button" class="mt-8 bg-hazard text-graphite font-display font-semibold px-8 py-3.5 tracking-wide hover:bg-off transition-colors">
-      SUBMIT REQUEST
-    </button>
+
+      <button type="submit" class="sm:col-span-2 mt-2 bg-hazard text-graphite font-display font-semibold px-8 py-3.5 tracking-wide hover:bg-off transition-colors">
+        SUBMIT REQUEST
+      </button>
+    </form>
   </div>
 </section>
 
