@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Features & Specifications | Mr.Align Modular Workstation Platform</title>
+<meta name="description" content="Explore the modular workstation platform behind Mr.Align: magnetic mounting, C-clamp, tripod, aerospace grade aluminum, and integrated USB-C connectivity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          canvas: '#F7F7F5',
+          panel: '#FFFFFF',
+          ink: '#111111',
+          muted: '#6B7280',
+          gold: '#C8A66A',
+        },
+        fontFamily: {
+          display: ['Satoshi', 'Inter', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        borderRadius: {
+          btn: '10px',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #F7F7F5; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card-hover {
+    transition: border-color 0.35s ease, transform 0.35s ease;
+  }
+  .card-hover:hover {
+    border-color: #C8A66A;
+    transform: translateY(-4px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
+  }
+  .prose-body p { margin-bottom: 1.25em; line-height: 1.75; color: #374151; }
+  .prose-body h2 { font-family: 'Satoshi', 'Inter', sans-serif; font-weight: 700; font-size: 1.75rem; margin-top: 2em; margin-bottom: 0.6em; letter-spacing: -0.01em; }
+  .prose-body h3 { font-family: 'Satoshi', 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; margin-top: 1.6em; margin-bottom: 0.5em; }
+  .prose-body ul { list-style: disc; padding-left: 1.4em; margin-bottom: 1.25em; color: #374151; }
+  .prose-body li { margin-bottom: 0.4em; }
+</style>
+</head>
+<body class="bg-canvas text-ink font-body antialiased">
+<header class="fixed top-0 inset-x-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+    <a href="../index.html" class="font-display font-bold text-lg tracking-tight">Mr.Align</a>
+    <nav class="hidden md:flex items-center gap-9 text-sm text-muted">
+      <a href="../index.html#mounts" class="hover:text-ink transition-colors">Products</a>
+      <a href="../index.html#accessories" class="hover:text-ink transition-colors">Accessories</a>
+      <a href="../Additional/features.html" class="hover:text-ink transition-colors">Features</a>
+      <a href="../blogs/index.html" class="hover:text-ink transition-colors">Insights</a>
+      <a href="../Additional/support.html" class="hover:text-ink transition-colors">Support</a>
+      <a href="../Additional/contact.html" class="hover:text-ink transition-colors">Contact</a>
+    </nav>
+    <a href="../Additional/contact.html" class="bg-ink text-white text-sm font-medium px-5 py-2.5 rounded-btn hover:bg-black/80 transition-colors">
+      Get a Quote
+    </a>
+  </div>
+</header>
+
+<section class="max-w-5xl mx-auto px-6 lg:px-10 pt-40 pb-16">
+  <div class="reveal text-center mb-16">
+    <p class="eyebrow mb-4">Features &amp; Specifications</p>
+    <h1 class="font-display font-bold text-4xl sm:text-5xl tracking-tight">The Modular Workstation Platform.</h1>
+    <p class="mt-4 text-muted max-w-2xl mx-auto">Every mounting option, material, and connectivity feature behind the Mr.Align industrial laptop tray mount system.</p>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 lg:px-10 pb-20">
+  <div class="reveal grid sm:grid-cols-2 gap-6">
+    <div class="border border-black/10 rounded-btn p-8">
+      <img src="../images/mount-magnetic-arm.png" alt="Magnetic laptop holder for electrical panels" class="w-full aspect-video object-cover rounded-btn mb-6">
+      <h3 class="font-display font-semibold text-lg mb-2">Magnetic Laptop Holder for Electrical Panels</h3>
+      <p class="text-sm text-muted leading-relaxed">A switchable magnet laptop mount that locks flat against any panel door, with a rotary magnetic mounting base for full-range positioning without drilling or clamping hardware.</p>
+    </div>
+    <div class="border border-black/10 rounded-btn p-8">
+      <img src="../images/mount-c-clamp.png" alt="Heavy duty C clamp laptop mount" class="w-full aspect-video object-cover rounded-btn mb-6">
+      <h3 class="font-display font-semibold text-lg mb-2">Heavy Duty C-Clamp Mount</h3>
+      <p class="text-sm text-muted leading-relaxed">Bites onto rails, tables, and scaffolding edges up to 6cm thick — the same heavy duty C clamp laptop mount used on construction and EPC sites.</p>
+    </div>
+    <div class="border border-black/10 rounded-btn p-8">
+      <img src="../images/mount-tripod.png" alt="Industrial tripod laptop stand" class="w-full aspect-video object-cover rounded-btn mb-6">
+      <h3 class="font-display font-semibold text-lg mb-2">Industrial Tripod Laptop Stand</h3>
+      <p class="text-sm text-muted leading-relaxed">A freestanding option for open floors with no panel or rail nearby — full three-point stability on uneven ground.</p>
+    </div>
+    <div class="border border-black/10 rounded-btn p-8">
+      <img src="../images/part-arm-segment.png" alt="Articulating arm laptop mount with no sag" class="w-full aspect-video object-cover rounded-btn mb-6">
+      <h3 class="font-display font-semibold text-lg mb-2">Articulating Arm, No Sag</h3>
+      <p class="text-sm text-muted leading-relaxed">Friction-locked joints hold position under load — an articulating arm laptop mount that doesn't drift or sag through a full shift of use.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white border-y border-black/5 py-20">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10">
+    <div class="reveal grid sm:grid-cols-2 gap-6">
+      <div class="p-8">
+        <h3 class="font-display font-semibold text-lg mb-2">Matte Black Anodized Aluminum</h3>
+        <p class="text-sm text-muted leading-relaxed">The full frame is built from aerospace grade aluminum laptop stand stock, anodized matte black for scratch and corrosion resistance in harsh plant environments.</p>
+      </div>
+      <div class="p-8">
+        <h3 class="font-display font-semibold text-lg mb-2">Quick Release Laptop Tray</h3>
+        <p class="text-sm text-muted leading-relaxed">A quick release laptop tray, industrial rated, lets you swap between mount types in seconds without tools.</p>
+      </div>
+      <div class="p-8">
+        <h3 class="font-display font-semibold text-lg mb-2">Internal Cable Routing</h3>
+        <p class="text-sm text-muted leading-relaxed">An internal cable routing laptop stand design keeps power and data cables inside the arm, not dangling loose across the panel.</p>
+      </div>
+      <div class="p-8">
+        <h3 class="font-display font-semibold text-lg mb-2">Industrial Tablet Holder, Quick Release</h3>
+        <p class="text-sm text-muted leading-relaxed">Swap the laptop tray for the optional industrial tablet holder with the same quick-release interface.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 lg:px-10 py-20">
+  <div class="reveal text-center max-w-2xl mx-auto mb-14">
+    <p class="eyebrow mb-4">Connectivity</p>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight">Single Cable Engineering Workstation Setup</h2>
+  </div>
+  <div class="reveal grid sm:grid-cols-2 gap-6">
+    <div class="border border-black/10 rounded-btn p-8">
+      <h3 class="font-display font-semibold text-lg mb-2">Integrated USB-C Docking Hub</h3>
+      <p class="text-sm text-muted leading-relaxed">The optional Mr.Align Dock is an integrated USB-C docking hub stand accessory — Ethernet, HDMI, storage, and power all live on the mount itself.</p>
+    </div>
+    <div class="border border-black/10 rounded-btn p-8">
+      <h3 class="font-display font-semibold text-lg mb-2">Pass-Through Ethernet</h3>
+      <p class="text-sm text-muted leading-relaxed">A pass-through ethernet laptop stand connection means one cable run from the panel, not a separate dongle hanging off the laptop.</p>
+    </div>
+    <div class="border border-black/10 rounded-btn p-8">
+      <h3 class="font-display font-semibold text-lg mb-2">Built-In HDMI</h3>
+      <p class="text-sm text-muted leading-relaxed">An industrial laptop stand with HDMI port built into the dock, for driving a secondary monitor on commissioning days.</p>
+    </div>
+    <div class="border border-black/10 rounded-btn p-8">
+      <h3 class="font-display font-semibold text-lg mb-2">Factory Floor Cable Management</h3>
+      <p class="text-sm text-muted leading-relaxed">Every factory floor cable management tool you need is already part of the mount — no separate clips or ties required.</p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 lg:px-10 pb-28">
+  <div class="reveal border border-black/10 rounded-btn font-mono text-sm overflow-hidden">
+    <div class="grid sm:grid-cols-2 px-6 py-4 border-b border-black/10 bg-white"><span class="text-muted">Weight</span><span>2.4 kg</span></div>
+    <div class="grid sm:grid-cols-2 px-6 py-4 border-b border-black/10"><span class="text-muted">Load Capacity</span><span>15 kg</span></div>
+    <div class="grid sm:grid-cols-2 px-6 py-4 border-b border-black/10 bg-white"><span class="text-muted">Laptop Size</span><span>Up to 17"</span></div>
+    <div class="grid sm:grid-cols-2 px-6 py-4 border-b border-black/10"><span class="text-muted">Mount Types</span><span>Magnetic / C-Clamp / Tripod</span></div>
+    <div class="grid sm:grid-cols-2 px-6 py-4 border-b border-black/10 bg-white"><span class="text-muted">Material</span><span>Aerospace grade 6061 anodized aluminum</span></div>
+    <div class="grid sm:grid-cols-2 px-6 py-4"><span class="text-muted">Folded Size</span><span>58 &times; 12 &times; 12 cm</span></div>
+  </div>
+</section>
+<footer id="footer" class="bg-ink py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row md:items-end justify-between gap-10">
+    <div>
+      <p class="font-display font-bold text-xl text-white mb-2">Mr.Align</p>
+      <p class="text-sm text-gray-400 max-w-xs leading-relaxed">Engineered for Precision.<br>Built for Professionals.</p>
+    </div>
+    <nav class="flex flex-wrap gap-x-10 gap-y-3 text-sm text-gray-400">
+      <a href="../index.html#mounts" class="hover:text-white transition-colors">Products</a>
+      <a href="../index.html#accessories" class="hover:text-white transition-colors">Accessories</a>
+      <a href="../Additional/features.html" class="hover:text-white transition-colors">Features</a>
+      <a href="../blogs/index.html" class="hover:text-white transition-colors">Insights</a>
+      <a href="../Additional/support.html" class="hover:text-white transition-colors">Support</a>
+      <a href="../Additional/contact.html" class="hover:text-white transition-colors">Contact</a>
+      <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+    </nav>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 mt-12 pt-8 border-t border-white/10">
+    <p class="text-xs text-gray-500">&copy; 2026 Mr.Align. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
