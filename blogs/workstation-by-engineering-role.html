@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workstations by Engineering Role | Mr.Align</title>
+<meta name="description" content="PLC programmers, automation engineers, and field service technicians all need different setups. Here's gear matched to each role.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          canvas: '#F7F7F5',
+          panel: '#FFFFFF',
+          ink: '#111111',
+          muted: '#6B7280',
+          gold: '#C8A66A',
+        },
+        fontFamily: {
+          display: ['Satoshi', 'Inter', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        borderRadius: {
+          btn: '10px',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #F7F7F5; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card-hover {
+    transition: border-color 0.35s ease, transform 0.35s ease;
+  }
+  .card-hover:hover {
+    border-color: #C8A66A;
+    transform: translateY(-4px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
+  }
+  .prose-body p { margin-bottom: 1.25em; line-height: 1.75; color: #374151; }
+  .prose-body h2 { font-family: 'Satoshi', 'Inter', sans-serif; font-weight: 700; font-size: 1.75rem; margin-top: 2em; margin-bottom: 0.6em; letter-spacing: -0.01em; }
+  .prose-body h3 { font-family: 'Satoshi', 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; margin-top: 1.6em; margin-bottom: 0.5em; }
+  .prose-body ul { list-style: disc; padding-left: 1.4em; margin-bottom: 1.25em; color: #374151; }
+  .prose-body li { margin-bottom: 0.4em; }
+</style>
+</head>
+<body class="bg-canvas text-ink font-body antialiased">
+<header class="fixed top-0 inset-x-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+    <a href="../index.html" class="font-display font-bold text-lg tracking-tight">Mr.Align</a>
+    <nav class="hidden md:flex items-center gap-9 text-sm text-muted">
+      <a href="../index.html#mounts" class="hover:text-ink transition-colors">Products</a>
+      <a href="../index.html#accessories" class="hover:text-ink transition-colors">Accessories</a>
+      <a href="../Additional/features.html" class="hover:text-ink transition-colors">Features</a>
+      <a href="../blogs/index.html" class="hover:text-ink transition-colors">Insights</a>
+      <a href="../Additional/support.html" class="hover:text-ink transition-colors">Support</a>
+      <a href="../Additional/contact.html" class="hover:text-ink transition-colors">Contact</a>
+    </nav>
+    <a href="../Additional/contact.html" class="bg-ink text-white text-sm font-medium px-5 py-2.5 rounded-btn hover:bg-black/80 transition-colors">
+      Get a Quote
+    </a>
+  </div>
+</header>
+
+<article class="max-w-3xl mx-auto px-6 lg:px-10 pt-40 pb-28">
+  <div class="reveal mb-10">
+    <p class="eyebrow mb-4">Insights &middot; July 2, 2026</p>
+    <h1 class="font-display font-bold text-4xl sm:text-5xl tracking-tight leading-tight">The Right Workstation for Every Engineering Role</h1>
+  </div>
+  <div class="reveal rounded-btn overflow-hidden mb-12">
+    <img src="../images/usage-plc-programming.png" alt="PLC programming workstation in a control room" class="w-full aspect-[16/9] object-cover">
+  </div>
+  <div class="reveal prose-body">
+
+<p>"Field engineer" covers a lot of ground. A PLC programmer's setup looks nothing like a robotics commissioning crew's, and neither resembles what an instrument technician carries into a plant. The right workstation depends heavily on the role — here's how it breaks down.</p>
+
+<h2>PLC Programmers</h2>
+<p>A <strong>PLC programming workstation</strong> needs to sit close to the cabinet without touching it, at a height that doesn't force a crouch through a full debugging session. Magnetic mounting to the panel door is usually the fastest setup, since it keeps both hands free for terminal work while the screen stays exactly where you left it.</p>
+
+<h2>Automation Engineers</h2>
+<p>Across a rollout, <strong>automation engineer gear</strong> gets used differently depending on the day — some near cabinets, some on open floor between cells. A modular base that swaps between magnetic and tripod mounting covers both without carrying two separate stands.</p>
+
+<h2>Field Service Engineers</h2>
+<p><strong>Field service engineer tools</strong> live in a van, not a workshop, which means size and weight matter as much as strength. A <strong>field service laptop setup</strong> that folds small enough for a door pocket gets used; one that needs its own case tends to get left behind.</p>
+
+<h2>Robotics Commissioning Teams</h2>
+<p>A <strong>robotics commissioning platform</strong> has to survive proximity to moving machinery — vibration resistance and a genuinely stable base matter more here than almost anywhere else on a plant floor.</p>
+
+<h2>Maintenance & Instrument Technicians</h2>
+<p>A <strong>maintenance technician laptop mount</strong> often needs to work in tight rack aisles where a tripod's footprint won't fit — a C-clamp onto the rack frame solves that. An <strong>instrument technician workstation</strong> has similar constraints: close-quarters access to calibration points, usually at odd angles a standard desk stand can't reach.</p>
+
+<h2>Control Systems Engineers</h2>
+<p><strong>Control systems engineer tools</strong> tend to move between the control room and the floor multiple times a day — this is where a genuinely portable base earns its keep, since a stand that stays folded up half the time isn't doing its job.</p>
+
+<h2>Plant Commissioning & Industrial Programmers</h2>
+<p>During a full plant startup, <strong>plant commissioning gear</strong> gets used for entire twelve-hour shifts. An <strong>industrial programmer stand</strong> built for that duration needs an adjustable height range wide enough to go from seated to standing without repositioning the whole tripod.</p>
+
+<h2>One Platform, Every Role</h2>
+<p>The common thread across every role above isn't a different stand for each — it's the same modular base with the right mounting head attached. Buy for the base platform first, and the role-specific mount becomes a five-second swap instead of a separate purchase.</p>
+
+  </div>
+  <div class="reveal mt-16 pt-10 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <p class="text-sm text-muted">See how the Mr.Align workstation applies this in the field.</p>
+    <a href="../index.html#mounts" class="bg-ink text-white font-medium px-7 py-3.5 rounded-btn hover:bg-black/80 transition-colors whitespace-nowrap">Explore the Workstation</a>
+  </div>
+</article>
+<footer id="footer" class="bg-ink py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row md:items-end justify-between gap-10">
+    <div>
+      <p class="font-display font-bold text-xl text-white mb-2">Mr.Align</p>
+      <p class="text-sm text-gray-400 max-w-xs leading-relaxed">Engineered for Precision.<br>Built for Professionals.</p>
+    </div>
+    <nav class="flex flex-wrap gap-x-10 gap-y-3 text-sm text-gray-400">
+      <a href="../index.html#mounts" class="hover:text-white transition-colors">Products</a>
+      <a href="../index.html#accessories" class="hover:text-white transition-colors">Accessories</a>
+      <a href="../Additional/features.html" class="hover:text-white transition-colors">Features</a>
+      <a href="../blogs/index.html" class="hover:text-white transition-colors">Insights</a>
+      <a href="../Additional/support.html" class="hover:text-white transition-colors">Support</a>
+      <a href="../Additional/contact.html" class="hover:text-white transition-colors">Contact</a>
+      <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+    </nav>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 mt-12 pt-8 border-t border-white/10">
+    <p class="text-xs text-gray-500">&copy; 2026 Mr.Align. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
