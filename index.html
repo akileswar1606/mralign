@@ -136,11 +136,11 @@
       A modular laptop stand for engineers who don't work at a desk. Portable. Precise. Professional.
     </p>
     <div class="mt-10 flex items-center gap-4">
-      <a href="#mounts" class="bg-ink text-white font-medium px-7 py-3.5 rounded-btn hover:bg-black/80 transition-colors">
-        Explore Product
+      <a href="#reserve" data-reserve-trigger class="bg-gold text-ink font-medium px-7 py-3.5 rounded-btn hover:opacity-90 transition-opacity">
+        Reserve My Spot
       </a>
-      <a href="#specs" class="bg-white text-ink font-medium px-7 py-3.5 rounded-btn border border-ink/15 hover:border-ink transition-colors">
-        View Specs
+      <a href="#mounts" class="bg-white text-ink font-medium px-7 py-3.5 rounded-btn border border-ink/15 hover:border-ink transition-colors">
+        Explore Product
       </a>
     </div>
   </div>
@@ -149,6 +149,145 @@
     <img src="images/hero-render.webp" alt="Mr.Align Field Workstation" class="w-full max-w-md h-auto rounded-btn" loading="eager" decoding="async">
   </div>
 </section>
+
+<!-- ========== RESERVE MODAL (triggered by hero button + floating button) ========== -->
+<div id="mr-reserve-overlay" class="hidden fixed inset-0 z-[100] items-center justify-center p-4" style="background: rgba(17,17,17,0.55);">
+  <div class="relative bg-white rounded-2xl p-8 sm:p-10 max-w-md w-full max-h-[90vh] overflow-y-auto">
+    <button id="mr-reserve-close" aria-label="Close" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+
+    <p class="eyebrow mb-3">First-batch reservation</p>
+    <h2 class="font-display font-bold text-3xl tracking-tight mb-3">Reserve your spot.</h2>
+    <p class="text-sm text-muted leading-relaxed mb-7">
+      The first production run is limited to 500 units. Reserved spots get priority allocation and founding-member pricing before public launch.
+    </p>
+
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-xs text-muted">Spots claimed</span>
+      <span class="text-xs font-semibold" id="mr-claimed-label">342 / 500</span>
+    </div>
+    <div class="w-full h-[5px] bg-black/10 rounded-full overflow-hidden mb-8">
+      <div class="h-full bg-gold rounded-full" style="width: 68%"></div>
+    </div>
+
+    <form id="mr-reserve-form" action="https://formsubmit.co/contact.gyrolabs@gmail.com" method="POST" class="flex flex-col gap-4">
+      <input type="hidden" name="_subject" value="New Mr.Align — Reserve My Spot signup">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+
+      <div>
+        <label class="text-xs text-muted block mb-1.5">Full name</label>
+        <input type="text" name="Full name" required placeholder="Jane Rodriguez" class="w-full text-sm px-4 py-3 rounded-lg border border-black/15 bg-canvas focus:outline-none focus:border-gold">
+      </div>
+      <div>
+        <label class="text-xs text-muted block mb-1.5">Phone number</label>
+        <input type="tel" name="Phone" required placeholder="+91 98765 43210" class="w-full text-sm px-4 py-3 rounded-lg border border-black/15 bg-canvas focus:outline-none focus:border-gold">
+      </div>
+      <div>
+        <label class="text-xs text-muted block mb-1.5">Email</label>
+        <input type="email" name="Email" required placeholder="jane@company.com" class="w-full text-sm px-4 py-3 rounded-lg border border-black/15 bg-canvas focus:outline-none focus:border-gold">
+      </div>
+      <div>
+        <label class="text-xs text-muted block mb-1.5">How much would you be willing to pay for this?</label>
+        <select name="Willingness to pay" required class="w-full text-sm px-4 py-3 rounded-lg border border-black/15 bg-canvas focus:outline-none focus:border-gold">
+          <option value="" disabled selected>Select a range</option>
+          <option value="Under ₹3,000">Under &#8377;3,000</option>
+          <option value="₹3,000 – ₹5,000">&#8377;3,000 &#8211; &#8377;5,000</option>
+          <option value="₹5,000 – ₹8,000">&#8377;5,000 &#8211; &#8377;8,000</option>
+          <option value="₹8,000 – ₹12,000">&#8377;8,000 &#8211; &#8377;12,000</option>
+          <option value="₹12,000+">&#8377;12,000+</option>
+        </select>
+      </div>
+
+      <button type="submit" class="mt-2 bg-ink text-white font-medium px-8 py-3.5 rounded-btn hover:bg-black/80 transition-colors">
+        Reserve my spot
+      </button>
+      <p class="text-xs text-muted text-center leading-relaxed">We'll reach out with pricing and availability before public launch.</p>
+    </form>
+
+    <div id="mr-reserve-success" class="hidden text-center py-6">
+      <div class="w-11 h-11 rounded-full bg-gold flex items-center justify-center mx-auto mb-4">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h3 class="font-display font-semibold text-xl mb-2">You're on the list.</h3>
+      <p class="text-sm text-muted leading-relaxed">We'll email and call you with pricing and availability before public launch.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FLOATING RESERVE BUTTON ========== -->
+<button id="mr-floating-reserve" aria-label="Reserve my spot" class="hidden fixed bottom-6 right-6 z-[90] items-center gap-2 bg-gold text-ink font-medium text-sm pl-4 pr-5 py-3 rounded-full shadow-lg hover:opacity-90 transition-opacity">
+  <span class="w-2 h-2 bg-ink rounded-full animate-pulse"></span>
+  Reserve My Spot
+</button>
+
+<script>
+  (function () {
+    const overlay = document.getElementById('mr-reserve-overlay');
+    const closeBtn = document.getElementById('mr-reserve-close');
+    const floatBtn = document.getElementById('mr-floating-reserve');
+    const heroSection = document.getElementById('top');
+    const form = document.getElementById('mr-reserve-form');
+    const success = document.getElementById('mr-reserve-success');
+
+    function openModal() {
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    // Any element with data-reserve-trigger opens the modal (used by the hero button).
+    document.querySelectorAll('[data-reserve-trigger]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
+    floatBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !overlay.classList.contains('hidden')) closeModal();
+    });
+
+    // Reveal the floating button only after the visitor has scrolled past the
+    // hero — showing it immediately would just duplicate the hero's own CTA.
+    if (heroSection) {
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            floatBtn.classList.add('hidden');
+            floatBtn.classList.remove('flex');
+          } else {
+            floatBtn.classList.remove('hidden');
+            floatBtn.classList.add('flex');
+          }
+        });
+      }, { threshold: 0 });
+      io.observe(heroSection);
+    }
+
+    // Progressive enhancement: intercept the form submit for an instant
+    // success state instead of a full-page redirect. Still posts to
+    // FormSubmit in the background.
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+        .catch(function () {});
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+    });
+  })();
+</script>
 
 <!-- ========== MOUNTING SYSTEMS ========== -->
 <section id="mounts" class="max-w-7xl mx-auto px-6 lg:px-10 py-28">
