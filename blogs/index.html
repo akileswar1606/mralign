@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BNSYEGDSQS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BNSYEGDSQS');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insights | Mr.Align Field Engineering Blog</title>
 <meta name="description" content="Guides on industrial mobile workstations, PLC programming setups, mounting hardware, and field engineering best practices from Mr.Align.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400&display=swap">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          canvas: '#F7F7F5',
-          panel: '#FFFFFF',
-          ink: '#111111',
-          muted: '#6B7280',
-          gold: '#C8A66A',
-        },
-        fontFamily: {
-          display: ['Satoshi', 'Inter', 'sans-serif'],
-          body: ['Inter', 'sans-serif'],
-        },
-        borderRadius: {
-          btn: '10px',
-        },
-      },
-    },
-  }
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="canonical" href="https://akileswar1606.github.io/mralign/blogs/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Insights | Mr.Align Field Engineering Blog">
+<meta property="og:description" content="Guides on industrial mobile workstations, PLC programming setups, mounting hardware, and field engineering best practices from Mr.Align.">
+<meta property="og:url" content="https://akileswar1606.github.io/mralign/blogs/index.html">
+<meta property="og:site_name" content="Mr.Align">
+<meta property="og:image" content="https://akileswar1606.github.io/mralign/images/hero-render.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insights | Mr.Align Field Engineering Blog">
+<meta name="twitter:description" content="Guides on industrial mobile workstations, PLC programming setups, mounting hardware, and field engineering best practices from Mr.Align.">
+<meta name="twitter:image" content="https://akileswar1606.github.io/mralign/images/hero-render.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mr.Align",
+  "url": "https://akileswar1606.github.io/mralign/",
+  "logo": "https://akileswar1606.github.io/mralign/favicon-512.png",
+  "description": "Mr.Align builds modular, rugged laptop stands and industrial mobile workstations for field engineers, PLC programmers, and automation technicians."
+}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400&display=swap"></noscript>
+<link rel="stylesheet" href="../tailwind-built.css">
 <style>
   html { scroll-behavior: smooth; }
   body { background-color: #F7F7F5; }
@@ -103,7 +116,7 @@
   const sorted = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
   grid.innerHTML = sorted.map(post => `
     <a href="${post.file}" class="card-hover block border border-black/10 rounded-btn overflow-hidden bg-white">
-      <img src="${post.image}" alt="${post.title}" class="w-full aspect-[4/3] object-cover">
+      <img src="${post.image}" alt="${post.title}" class="w-full aspect-[4/3] object-cover" loading="lazy" decoding="async">
       <div class="p-6">
         <p class="text-xs text-muted mb-2">${new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
         <h3 class="font-display font-semibold text-lg mb-2 leading-snug">${post.title}</h3>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akileswar1606.github.io/mralign/sitemap.xml
